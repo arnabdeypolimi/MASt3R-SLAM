@@ -1,13 +1,32 @@
 [build-system]
-requires = ["setuptools"]
+requires = ["setuptools", "torch"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "MAST3R"
 version = "0.0.1"
-dynamic = ["dependencies"]
+dependencies = [
+    "scikit-learn",
+    "roma",
+    "gradio",
+    "matplotlib",
+    "tqdm",
+    "opencv-python",
+    "scipy",
+    "einops",
+    "trimesh",
+    "tensorboard",
+    "pyglet",
+    "torch>=2.4.1",
+    "huggingface-hub[torch]>=0.22",
+    "curope @ file:///${PROJECT_ROOT}/dependencies/mast3r_slam/thirdparty/mast3r/dust3r/croco/models/curope",
+    "asmk @ file:///${PROJECT_ROOT}/dependencies/mast3r_slam/thirdparty/mast3r/asmk"
+]
 
 [tool.setuptools.packages.find]
 where = ["."]
 include = ["mast3r", "dust3r"]
 namespaces = false
+
+[tool.uv]
+no-build-isolation-package = ["torch"]

@@ -15,9 +15,11 @@ dependencies = [
     "torchcodec==0.1",
     "lietorch @ git+https://github.com/princeton-vl/lietorch.git",
     "plyfile",
+    "torch>=2.4.1",
     "in3d",
     "mast3r",
     ]
+
 
 [tool.setuptools.packages.find]
 where = ["."]
@@ -27,3 +29,6 @@ namespaces = false
 [tool.uv.sources]
 in3d = { path = "thirdparty/in3d" }
 mast3r = { path = "thirdparty/mast3r"}
+
+[tool.uv]
+no-build-isolation-package = ["torch"]

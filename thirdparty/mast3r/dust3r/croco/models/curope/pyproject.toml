@@ -1,0 +1,21 @@
+[build-system]
+requires = [
+    "setuptools",
+    "wheel",
+    # Make the torch build dependency specific to linux x86_64
+    "torch ; python_full_version == '3.10.*' and sys_platform == 'linux' and platform_machine == 'x86_64'",
+    "numpy" # Consider pinning numpy and/or adding platform markers if necessary
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "curope"
+version = "0.0.1"
+dependencies = [
+    "numpy==1.26.4",
+    "torch @ https://download.pytorch.org/whl/cu121/torch-2.4.1%2Bcu121-cp310-cp310-linux_x86_64.whl",
+]
+
+
+[tool.uv]
+no-build-isolation-package = ["torch"]
