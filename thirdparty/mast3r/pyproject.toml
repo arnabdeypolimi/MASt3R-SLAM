@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools", "torch"]
+requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -17,7 +17,6 @@ dependencies = [
     "trimesh",
     "tensorboard",
     "pyglet",
-    "torch>=2.4.1",
     "huggingface-hub[torch]>=0.22",
     "curope @ file:///${PROJECT_ROOT}/dependencies/mast3r_slam/thirdparty/mast3r/dust3r/croco/models/curope",
     "asmk @ file:///${PROJECT_ROOT}/dependencies/mast3r_slam/thirdparty/mast3r/asmk"

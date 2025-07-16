@@ -13,9 +13,7 @@ dependencies = [
     "evo",
     "natsort",
     "torchcodec==0.1",
-    "lietorch @ git+https://github.com/princeton-vl/lietorch.git",
     "plyfile",
-    "torch>=2.4.1",
     "in3d",
     "mast3r",
     ]
