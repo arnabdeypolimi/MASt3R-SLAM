@@ -3,7 +3,7 @@ import numpy as np
 import torch
 import einops
 
-import mast3r.utils.path_to_dust3r  # noqa
+from mast3r_slam.thirdparty.mast3r.utils.path_to_dust3r import path_to_dust3r  # noqa
 from dust3r.utils.image import ImgNorm
 from mast3r.model import AsymmetricMASt3R
 from mast3r_slam.retrieval_database import RetrievalDatabase
